@@ -14,7 +14,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 
             if(intent.getAction().equals(Intent.ACTION_POWER_CONNECTED)){
                 Log.d(TAG, "onReceive: Power connected" );
-                Toast.makeText(context, "Power connected\"", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Power connected", Toast.LENGTH_SHORT).show();
             }
         }
     }
