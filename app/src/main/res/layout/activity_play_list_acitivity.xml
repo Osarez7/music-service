@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:text="Song Name"
                 android:textSize="20dp"
-                tools:fontFamily="@font/rock_salt" />
+                android:fontFamily="@font/rock_salt" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -14,6 +14,6 @@
         android:text="File Name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="18dp"
-        tools:fontFamily="@font/roboto_thin" />
+        android:fontFamily="@font/roboto_thin" />
 
 </LinearLayout>

@@ -12,9 +12,7 @@ import java.util.ArrayList;
 import co.edu.intecap.services.R;
 import co.edu.intecap.services.model.Song;
 
-/**
- * Created by mitaly on 4/6/17.
- */
+
 
 public class AdapterClass extends ArrayAdapter<Song> {
     Context cxt;
