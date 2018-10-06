@@ -19,15 +19,17 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:orientation="vertical">
+
             <TextView
+                android:id="@+id/txtSongName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:id="@+id/txtSongName"
                 android:layout_margin="15dp"
                 android:gravity="center"
+                android:text="Song Name"
                 android:textSize="20dp"
-                android:text="Song Name"/>
+                tools:fontFamily="@font/rock_salt" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -103,15 +103,21 @@ public class PlayListAcitivity extends AppCompatActivity {
                 //getting absolute path of selected song from bean class 'SongObject'
                 Song song = listOfContents.get(position);
 
-                //Play the selected song by starting the service
-                Intent start = new Intent(PlayListAcitivity.this, MusicService.class);
-                start.putExtra(MusicService.AUDIO_PATH, song.getAbsolutePath());
-                startService(start);
+
 
                 //Get and set the name of song in the player
                 songName = listOfContents.get(position).getFileName();
                 txtSongName.setText(songName);
+
+                //Play the selected song by starting the service
+                Intent start = new Intent(PlayListAcitivity.this, MusicService.class);
+                start.putExtra(MusicService.AUDIO_PATH, song.getAbsolutePath());
+                start.putExtra(MusicService.AUDIO_NAME, songName);
+                startService(start);
+
                 btnPlayStop.setText("Stop");
+
+
             }
 
         });
