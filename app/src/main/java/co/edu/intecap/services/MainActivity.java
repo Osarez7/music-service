@@ -15,8 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        intentFilter.addAction(Intent.ACTION_BOOT_COMPLETED);
+        intentFilter.addAction(Intent.ACTION_POWER_CONNECTED);
     }
 
 

@@ -3,6 +3,7 @@ package co.edu.intecap.services;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -10,11 +11,10 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
         private static final String TAG = "MyBroadcastReceiver";
         @Override
         public void onReceive(Context context, Intent intent) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("Action: " + intent.getAction() + "\n");
-            sb.append("URI: " + intent.toUri(Intent.URI_INTENT_SCHEME).toString() + "\n");
-            String log = sb.toString();
-            Log.d(TAG, log);
-            Toast.makeText(context, log, Toast.LENGTH_LONG).show();
+
+            if(intent.getAction().equals(Intent.ACTION_POWER_CONNECTED)){
+                Log.d(TAG, "onReceive: Power connected" );
+                Toast.makeText(context, "Power connected\"", Toast.LENGTH_SHORT).show();
+            }
         }
     }
