@@ -21,6 +21,8 @@ public class MusicService extends Service {
         mediaPlayer = new MediaPlayer();
         try {
 
+            Log.d(TAG, "Service onStartCommand: " + intent.getStringExtra(AUDIO_PATH));
+
             mediaPlayer.setDataSource(intent.getStringExtra(AUDIO_PATH));
             mediaPlayer.prepare();
             mediaPlayer.setLooping(true);
